@@ -4,48 +4,44 @@
   --secondary-text-color: #757575;
   --invert-text-color: #ffffff;
   --accent-color: #2196f3;
-  --background: #2f303a;
+  --background-main: #ffffff;
   --background-section: #f5f4fa;
+  --background: #2f303a;
 }
-/* Глобальные настройки */
+
+/* глобальные настройки */
 a {
   /* убирает подчеркивание ссылок */
   text-decoration: none;
   color: var(--secondary-text-color);
 }
-
 li {
   /* Убираем маркеры */
   list-style-type: none;
 }
-
-ul {
-  margin-left: 0;
-  /* Отступ слева в браузере IE и Opera */
-  padding-left: 0;
-  /* Отступ слева в браузере Firefox, Safari, Chrome */
-}
-
 /* скрытие элементов - не подходит для семантики */
 .hidden {
   display: none;
 }
-
-/* Глобальный border-box */
+/* глобальный border-box */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, li, ul, p {
+  padding: 0 0;
+  margin: 0 0;
+}
+
 /* для проверки отступов от элементов */
-.test-content {
+.test {
   outline: 2px solid tomato;
   background-color: green;
 }
 
-
-/* общие настройки */
+/* главная страница */
 body {
   font-family: 'Roboto', 'Verdana', 'Tahoma', sans-serif;
   font-style: normal;
@@ -54,31 +50,56 @@ body {
   color: var(--primary-text-color);
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* outline: 2px solid tomato; */
+}
 
-/* Остальной код */
+h2 {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
 
-/* site logo */
+/* хедер */
+
+.page-header {
+  background-color: var(--background-main);
+  border-bottom: 1px solid #ECECEC;
+}
+
+/* лого */
 .logo {
   font-family: 'Raleway';
   font-size: 26px;
   line-height: 1.19;
   color: var(--primary-text-color);
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
+
 .logo:hover,
 .logo:focus {
   color: var(--accent-color);
 }
+
 .logo > span {
   color: var(--accent-color);
 }
 
-/* nave menu */
+/* нав. меню */
 .main-nav .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  padding: 32px 0px;
 }
 /* цвет наведение на меню  */
 .main-nav .link:hover,
@@ -100,6 +121,12 @@ body {
 .header-contact a:hover {
   color: var(--accent-color);
 }
+
+/* секция hero */
+.hero {
+  background-color: var(--secondary-text-color);
+  min-height: 600px;
+}
 h1 {
   font-weight: 900;
   font-size: 44px;
@@ -107,40 +134,72 @@ h1 {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--invert-text-color);
-  background-color: var(--secondary-text-color);
+  color: var(--invert-text-color);  
+  padding-top: 200px;
+  margin-bottom: 30px;
 }
 .main-btn {
   font-size: 16px;
-  line-height: 1, 87;
-  display: flex;
+  line-height: 1,87;
+  display: inline-block;
+  min-width: 200xp;
+  height: 50px;
+  padding: 10px 32px;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--invert-text-color);
-  background: var(--accent-color);
+  background: var(--accent-color); 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 1px solid transparent;
   cursor: pointer;
+  margin-bottom: 200px;
 }
 
+/* секция features */
+.features {
+margin-top: 94px;
+  }
 .features h3 {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
-
 .features p {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   color: var(--secondary-text-color);
+  margin: 0;
 }
 
-h2 {
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
+/* секция employment */
+.employment {
+  margin: 94px 0;
+  }
+
+.em-pic {
+  margin-top: 50px;
+ }
+
+/* секция team */
+.team {
+padding: 94px 0;
+background-color: var(--background-section);
+}
+.team h2 {
+margin-bottom: 50px;  
+}
+
+.border-photo {
+  width: 270px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team p {
@@ -148,6 +207,8 @@ h2 {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team h3 {
@@ -156,30 +217,36 @@ h2 {
   line-height: 1.18;
   text-align: center;
   color: var(--secondary-text-color);
+  padding-bottom: 30px;
 }
 
+/* секция footer */
 footer {
   background: var(--background);
+  padding: 60px 0;
 }
+
 .logo-footer {
   font-family: 'Raleway';
   font-size: 26px;
   line-height: 1.19;
   color: var(--invert-text-color);
+  display:inline-block;
+  margin-bottom: 20px;
 }
 
-.logo-footer > span {
+.logo-footer span {
   color: var(--accent-color);
 }
 
-footer > a > address {
+footer address {
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
   color: var(--invert-text-color);
 }
-footer > ul > li > a {
+footer a {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
