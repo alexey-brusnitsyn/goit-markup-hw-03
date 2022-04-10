@@ -24,8 +24,10 @@ li {
 }
 
 /* скрытие элементов - не подходит для семантики */
-.hidden {
-  display: none;
+.hide {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
 
 /* глобальный border-box */
