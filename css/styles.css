@@ -52,14 +52,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 20px;
-  padding-right: 20px;
-  outline: 2px solid tomato; 
-}
+
 
 h2 {
   font-size: 36px;
@@ -74,15 +67,29 @@ h2 {
   border-bottom: 1px solid #ECECEC;
 }
 
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 2px solid tomato;
+}
+
+.flex {
+display: flex;
+align-items: center;
+/* justify-content: space-between; */
+}
 /* лого */
 .logo {
   font-family: 'Raleway';
   font-size: 26px;
   line-height: 1.19;
   color: var(--primary-text-color);
-  display: inline-block;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  display: block;
+  margin-right: 93px;
 }
 
 .logo:hover,
@@ -95,13 +102,33 @@ h2 {
 }
 
 /* нав. меню */
+.main-nav {
+  display: flex;
+}
+.main-nav .item {
+  outline: 1px solid tomato;
+}
+
+.main-nav .item:not(last-child){
+  margin-right: 50px;
+}
+
+/* Еще один способ убрать крайний отступ
+.main-nav .item + .item {
+  margin-left: 50px;
+} */
+
 .main-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  
+  color: var(--primary-text-color);
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  padding: 32px 0px;
 }
 /* цвет наведение на меню  */
 .main-nav .link:hover,
@@ -114,12 +141,21 @@ h2 {
 }
 
 .header-contact {
+  display: flex;
+  margin-left: auto;
+
+  color: var(--secondary-text-color);
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
 }
+
+.header-contact li + li {
+  margin-left: 50px;
+}
+
 .header-contact a:hover {
   color: var(--accent-color);
 }
@@ -186,6 +222,10 @@ margin-top: 94px;
   margin-top: 50px;
  }
 
+ /* исправляет сбоку/снизу белые полосы у картинки */
+.em-pic img {
+  display: block;
+}
 /* секция team */
 .team {
 padding: 94px 0;
