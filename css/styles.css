@@ -8,7 +8,7 @@
   --background-section: #f5f4fa;
   --background: #2f303a;
   --bg-work-btn: #f5f4fa;
-  --border-prt: #EEEEEE;
+  --border-prt: #eeeeee;
 }
 
 /* глобальные настройки */
@@ -17,14 +17,17 @@ a {
   text-decoration: none;
   color: var(--secondary-text-color);
 }
+
 li {
   /* Убираем маркеры */
   list-style-type: none;
 }
+
 /* скрытие элементов - не подходит для семантики */
 .hidden {
   display: none;
 }
+
 /* глобальный border-box */
 *,
 *::before,
@@ -32,7 +35,13 @@ li {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, li, ul, p {
+h1,
+h2,
+h3,
+h4,
+li,
+ul,
+p {
   padding: 0 0;
   margin: 0 0;
 }
@@ -52,8 +61,6 @@ body {
   color: var(--primary-text-color);
 }
 
-
-
 h2 {
   font-size: 36px;
   line-height: 1.16;
@@ -61,12 +68,10 @@ h2 {
 }
 
 /* хедер */
-
 .page-header {
   background-color: var(--background-main);
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
-
 
 .container {
   margin-left: auto;
@@ -78,10 +83,11 @@ h2 {
 }
 
 .flex {
-display: flex;
-align-items: center;
-/* justify-content: space-between; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
 }
+
 /* лого */
 .logo {
   font-family: 'Raleway';
@@ -105,11 +111,12 @@ align-items: center;
 .main-nav {
   display: flex;
 }
+
 .main-nav .item {
   outline: 1px solid tomato;
 }
 
-.main-nav .item:not(last-child){
+.main-nav .item:not(last-child) {
   margin-right: 50px;
 }
 
@@ -122,7 +129,7 @@ align-items: center;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  
+
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -130,11 +137,13 @@ align-items: center;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 /* цвет наведение на меню  */
 .main-nav .link:hover,
 .main-nav .link:focus {
   color: var(--accent-color);
 }
+
 /* цвет меню текущей страницы */
 .main-nav .link.current {
   color: var(--accent-color);
@@ -164,46 +173,61 @@ align-items: center;
 .hero {
   background-color: var(--secondary-text-color);
   min-height: 600px;
+  text-align: center;
 }
+
 h1 {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--invert-text-color);  
+  color: var(--invert-text-color);
   padding-top: 200px;
   margin-bottom: 30px;
 }
+
 .main-btn {
-  font-size: 16px;
-  line-height: 1,87;
   display: inline-block;
   min-width: 200xp;
   height: 50px;
   padding: 10px 32px;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--invert-text-color);
-  background: var(--accent-color); 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 1px solid transparent;
-  cursor: pointer;
   margin-bottom: 200px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  color: var(--invert-text-color);
+  background: var(--accent-color);
+
+  font-size: 16px;
+  line-height: 1,87;
+  align-items: center;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
 }
 
 /* секция features */
 .features {
-margin-top: 94px;
-  }
+  margin-top: 94px;
+}
+
 .features h3 {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.features-list .item {
+  width: 270px;
 }
 .features p {
   font-weight: 400;
@@ -216,31 +240,32 @@ margin-top: 94px;
 /* секция employment */
 .employment {
   margin: 94px 0;
-  }
+}
 
 .em-pic {
   margin-top: 50px;
- }
+}
 
- /* исправляет сбоку/снизу белые полосы у картинки */
+/* исправляет сбоку/снизу белые полосы у картинки */
 .em-pic img {
   display: block;
 }
+
 /* секция team */
 .team {
-padding: 94px 0;
-background-color: var(--background-section);
+  padding: 94px 0;
+  background-color: var(--background-section);
 }
+
 .team h2 {
-margin-bottom: 50px;  
+  margin-bottom: 50px;
 }
 
 .border-photo {
   width: 270px;
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-  0px 1px 1px rgba(0, 0, 0, 0.14),
-  0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -273,7 +298,7 @@ footer {
   font-size: 26px;
   line-height: 1.19;
   color: var(--invert-text-color);
-  display:inline-block;
+  display: inline-block;
   margin-bottom: 20px;
 }
 
@@ -288,6 +313,7 @@ footer address {
   line-height: 1.71;
   color: var(--invert-text-color);
 }
+
 footer a {
   font-weight: 400;
   font-size: 14px;
@@ -301,14 +327,13 @@ footer a:hover {
 
 /* Страница примеры работ */
 .filter-r {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 94px;
-    width: 616px;
-    padding-left: 20px;
-    padding-right: 20px;
-    outline: 2px solid tomato;
-
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 94px;
+  width: 616px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 2px solid tomato;
 }
 
 .work-btn {
@@ -322,7 +347,7 @@ footer a:hover {
   cursor: pointer;
   padding: 6px 22px;
   border: 1px solid transparent;
-  margin-left: 8px; 
+  margin-left: 8px;
 }
 
 .work-btn:hover {
@@ -339,10 +364,10 @@ footer a:hover {
 }
 
 .pr-t {
-width: 370px;
-background: var(--background-main);
-border: 1px solid var(--border-prt);
-box-sizing: border-box;
+  width: 370px;
+  background: var(--background-main);
+  border: 1px solid var(--border-prt);
+  box-sizing: border-box;
 }
 
 .work-prts h3 {
@@ -353,7 +378,7 @@ box-sizing: border-box;
   margin: 20px 24px 0 24px;
 }
 
-.work-prts  p {
+.work-prts p {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
