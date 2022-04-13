@@ -12,14 +12,14 @@
 }
 
 /* глобальные настройки */
-a {
-  /* убирает подчеркивание ссылок */
+/* убирает подчеркивание ссылок */
+.link {
   text-decoration: none;
   color: var(--secondary-text-color);
 }
 
-li {
   /* Убираем маркеры */
+.list {
   list-style: none;
 }
 
@@ -81,7 +81,7 @@ h2 {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .flex {
@@ -112,10 +112,6 @@ h2 {
 /* нав. меню */
 .main-nav {
   display: flex;
-}
-
-.main-nav .item {
-  outline: 1px solid tomato;
 }
 
 .main-nav .item:not(last-child) {
@@ -336,13 +332,7 @@ footer a:hover {
 
 /* Страница примеры работ */
 .filter {
-  /* margin-left: auto;
-  margin-right: auto; */
   margin-top: 94px;
-  /* width: 616px; */
-  /* padding-left: 20px;
-  padding-right: 20px; */
-  outline: 2px solid tomato;
 }
 
 .filter-list {
